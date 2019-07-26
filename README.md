@@ -23,7 +23,7 @@ We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolut
       conda env create -f environment.yml
       ```
       check environment.yml and change the dependencies if necessary
-  * Job script on batch system
+  * Create a job script on batch system
     ```
     #!/bin/bash
     #SBATCH --job-name=train-3dmfv-net-tf
@@ -48,3 +48,17 @@ We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolut
     python train_fvnet_inception.py --dataset_name=rgbd_washington --num_gaussians=12 --fvnet=0 --num_inception=5 --normalize=1
     ```
     [More information about hardware and the current system status](https://wr0.wr.inf.h-brs.de/wr/index.html)
+  * Submit the job
+    ```
+    sbatch job.sh
+    ```
+  * Status
+    * Check queue
+      ```
+      squeue
+      ```
+    * Cancel the job (scancel job_id e.g. scancel 207550 for the job id 207550)
+      ```
+      scancel 207550
+      ```
+    * [More on slurm and batch systems](https://wr0.wr.inf.h-brs.de/wr/usage.html)
