@@ -17,12 +17,41 @@ We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolut
 
 * Training on cluster
   * Environment setup
-    * [Install anaconda](https://docs.anaconda.com/anaconda/install/linux/)  
+    * [Install anaconda](https://docs.anaconda.com/anaconda/install/linux/)
+    * Setup anaconda shortcut
+      * Create .condarc config
+        ```
+        #!/bin/bash
+        function condapy() {
+            local RED="\[\033[0;31m\]"
+            PATH=$HOME/anaconda3/bin:$PATH
+            export PS1="$RED[CONDA3] $PS1"
+        }
+        condapy
+        alias ipy='jupyter qtconsole'
+        alias startnb='jupyter notebook'
+        alias nb2pdf='jupyter nbconvert --to latex --post PDF'
+        condaforge() { conda install -c conda-forge "$@" ;}
+        ```
+      * Update .bashrc config
+        * Add alias for condarc to bashrc
+          ```
+          alias anaconda3='bash --rcfile ~/.condarc'
+          ```
+        * The source your terminal
+          ```
+          source ~/.bashrc
+          ```
     * Create conda environment
-      ```
-      conda env create -f environment.yml
-      ```
-      check environment.yml and change the dependencies if necessary
+      * Enter your conda
+        ```
+        anaconda3
+        ```
+      * Create your environment
+        ```
+        conda env create -f environment.yml
+        ```
+        check environment.yml and change the dependencies if necessary
   * Create a job script on batch system
     ```
     #!/bin/bash
