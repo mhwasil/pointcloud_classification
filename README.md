@@ -16,7 +16,13 @@ We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolut
     * Our industrial object dataset (b-it-bots@Work)
 
 * Training on cluster
+  * Request account
+    * You can request access to [H-BRS cluster](https://wr0.wr.inf.h-brs.de/wr/index.html) by sending email to Deebul or Santosh
   * Environment setup
+    * ssh to the cluster
+      ```
+      ssh username2s@wr0.wr.inf.h-brs.de
+      ```
     * [Install anaconda](https://docs.anaconda.com/anaconda/install/linux/)
     * Setup anaconda shortcut
       * Create .condarc config
