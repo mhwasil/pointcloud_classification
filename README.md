@@ -1,5 +1,5 @@
 A point cloud classification on real data using CNNs. 
-There are three methods proposed in this work: 3DmFFV-Inception, 3DmFV-Net and dynamic graph convolution (DGCNN).
+We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolution (DGCNN) on real dataset.
 * Dependencies
    * tensorflow
    * open3d
@@ -22,6 +22,7 @@ There are three methods proposed in this work: 3DmFFV-Inception, 3DmFV-Net and d
       ```
       conda env create -f environment.yml
       ```
+      check environment.yml and change the dependencies if necessary
   * Job script on batch system
     ```
     #!/bin/bash
@@ -41,8 +42,9 @@ There are three methods proposed in this work: 3DmFFV-Inception, 3DmFV-Net and d
     source ~/anaconda3/bin/activate ~/anaconda3/envs/env-pointcloud
 
     # locate to your root directory 
-    cd /home/mwasil2s/deeplearning_walkthrough/3DmFV-Net
+    cd /home/mwasil2s/deeplearning_walkthrough/3DmFV-Inception
 
     # run the script
     python train_fvnet_inception.py --dataset_name=rgbd_washington --num_gaussians=12 --fvnet=0 --num_inception=5 --normalize=1
     ```
+    [More information about hardware and the current system status](https://wr0.wr.inf.h-brs.de/wr/index.html)
