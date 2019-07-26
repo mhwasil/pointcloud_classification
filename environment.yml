@@ -1,0 +1,26 @@
+name: env-pointcloud
+channels:
+  - defaults
+  - anaconda
+  - conda-forge
+  - open3d-admin
+dependencies:
+    - python
+    - nb_conda
+    - tensorflow-gpu
+    - h5py
+    - numpy
+    - scikit-learn
+    - scikit-image
+    - scipy
+    - opencv
+    - jupyterlab
+    - joblib
+    - easydict
+    - open3d
+    - opencv
+    - Pillow
+    - pytorch
+    - torchvision
+    - pip:
+      - future
