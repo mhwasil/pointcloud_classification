@@ -1,5 +1,4 @@
-A point cloud classification on real data using CNNs. 
-We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolution (DGCNN) on real dataset.
+A point cloud classification using CNNs and a classical machine learning algorithm (random forest, svm) 
 * Dependencies
    * tensorflow
    * open3d
