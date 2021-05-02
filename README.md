@@ -9,10 +9,9 @@ We proposed 3DmFV-Inception and implemented 3DmFV-Net and dynamic graph convolut
     * ToDo
 * ToDo
     * How to train
+    * Upload datasets
 * Evaluation
   * The evaluation has been done on three different datasets
-    * Washington RGB-D
-    * JHUIT-50
     * Our industrial object dataset (b-it-bots@Work)
 
 * Training on cluster
