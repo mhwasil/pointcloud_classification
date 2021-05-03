@@ -1,0 +1,2 @@
+/scratch/mwasil2s/dataset/b-it-bots/nagoya_montreal_normalized/atwork_test_normalized_0.pgz
+/scratch/mwasil2s/dataset/b-it-bots/nagoya_montreal_normalized/atwork_test_normalized_1.pgz
