@@ -1,25 +1,22 @@
-name: env-pointcloud
+name: pc_classification
 channels:
   - defaults
   - anaconda
   - conda-forge
   - open3d-admin
 dependencies:
-    - python
-    - nb_conda
-    - tensorflow-gpu
-    - h5py
-    - numpy
-    - scikit-learn
-    - scikit-image
-    - scipy
-    - opencv
-    - joblib
-    - easydict
-    - open3d
-    - opencv
-    - Pillow
-    - pytorch
-    - torchvision
-    - pip:
-      - future
+  - python==3.6.*
+  - nb_conda
+  - h5py
+  - scikit-learn
+  - scikit-image
+  - jupyterlab
+  - easydict
+  - open3d
+  - tensorflow-gpu==1.14.1
+  - pip:
+    - opencv-python
+    - transforms3d
+    - gpustat
+    - mock
+    - future
