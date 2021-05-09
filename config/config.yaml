@@ -1,0 +1,108 @@
+data:
+  num_points: 2048
+  datadir_root: ./dataset
+  dataset_name: b-it-bots_atwork_dataset
+  num_classes: 15
+  augment_rotation: False
+  augment_scale: False
+  augment_translation: False
+  augment_jitter: False
+  augment_outlier: False
+
+train:
+  batch_size: 16
+  max_epoch: 100
+  gpu_selection: 0
+  limit_gpu: True #limit gpu to selection
+  fine_tune: True
+  logdir_root: "/scratch/mwasil2s/log_train/robocup_pointcloud_classification/"
+
+models:
+  DGCNNC:
+    pointcloud_color: True
+    base_learning_rate: 0.001 
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
+    
+  DGCNN:
+    pointcloud_color: False
+    base_learning_rate: 0.001 
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
+    
+  3DmFV:
+    pointcloud_color: False
+    n_gaussians: 5
+    gmm_type: 'grid'
+    gmm_variance: 0.04
+    add_gaussian_noise: False
+    base_learning_rate: 0.001 
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    weight_decay: 0.0
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
+    
+  SpiderCNN:
+    pointcloud_color: False
+    base_learning_rate: 0.001 
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
+    
+  PointNet:
+    pointcloud_color: False
+    base_learning_rate: 0.001 
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
+    
+  PointNet2:
+    pointcloud_color: False
+    base_learning_rate: 0.001
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
+    
+  PointCNN:
+    pointcloud_color: False
+    base_learning_rate: 0.001
+    momentum: 0.9
+    optimizer: 'adam'
+    decay_step: 200000
+    decay_rate: 0.7
+    bn_init_decay: 0.5
+    bn_decay_decay_rate: 0.5
+    bn_decay_decay_step: 200000 #float (decay_step)
+    bn_decay_clip: 0.99
