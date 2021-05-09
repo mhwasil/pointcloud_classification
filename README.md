@@ -1,18 +1,18 @@
 A point cloud classification using CNNs and a classical machine learning algorithm (random forest, svm) 
 * Dependencies
-   * tensorflow
-   * open3d
-   * scikit-learn
-   * scipy
+  ```
+  conda env create -f environment.yml
+  ```
 * Usage
-    * ToDo
-* ToDo
-    * How to train
-    * Upload datasets
-* Evaluation
-  * The evaluation has been done on three different datasets
-    * Our industrial object dataset (b-it-bots@Work)
-
+  * Train
+    ```
+    python trainer.py --model DGCNNC --train
+    ```
+  * Evaluation
+    ```
+    python trainer.py --model DGCNNC 
+    ```
+  
 * Training on cluster
   * Request account
     * You can request access to [H-BRS cluster](https://wr0.wr.inf.h-brs.de/wr/index.html) by sending email to Deebul or Santosh
