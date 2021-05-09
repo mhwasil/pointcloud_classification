@@ -18,4 +18,4 @@ source ~/anaconda3/bin/activate ~/anaconda3/envs/pc-classification
 cd /home/mwasil2s/deeplearning_walkthrough/pointcloud_classification
 
 # run the script
-python train_fvnet_inception.py --dataset_name=rgbd_washington --num_gaussians=12 --fvnet=0 --num_inception=5 --normalize=1
+python trainer.py --model DGCNNC --train
