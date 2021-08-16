@@ -61,3 +61,17 @@
     scancel 207550
     ```
   * [More on slurm and batch systems](https://wr0.wr.inf.h-brs.de/wr/usage.html)
+
+* Running tensorboard on the cluster
+
+  You can run tensorboard on the cluster by submitting another job to the same node, and then ssh tunnel to the node so that you can open tensorboard loacally in your pc:
+  * Edit your job file (replace the training script with the following):
+    ```
+    tensorboard --port=9000 --logdir=~/path/to/your/log
+    ```
+  * SSH tunneling to the cluster
+    ```
+    ssh -N -f -L 9000:your_node:9000 username2s@wr0.wr.inf.h-brs.de
+    ```
+    replace `your_node` with the node you are scheduled to e.g. `wr15`, and `username2s` with your FB02 UID.
+  * In your browser, open `localhost:9000`
